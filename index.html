@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Encriptador</title>
+  </head>
+  <script type="text/javascript"></script>
+  <body>
+    <main class="container">
+      <div class="container_logo">
+        <img src="./assets/logo_a.svg" alt="logo_alura" />
+      </div>
+
+      <div class="container_main_text">
+        <div class="container_textarea">
+          <textarea
+            id="firstText"
+            name="firstText"
+            autofocus
+            type="text"
+            placeholder="Ingrese el texto aquí"
+            class="container_main_text_input"
+            required
+          ></textarea>
+        </div>
+        <span class="alert" id="alert"></span>
+        <div class="text_warning">
+          <img src="./assets/signo.svg" alt="icon_admiracion" />
+          <p>Solo letras minúsculas y sin acentos.</p>
+        </div>
+        <div class="section_buttons">
+          <button class="btn_enc" onclick="encriptar()">Encriptar</button>
+          <button class="btn_desc" onclick="desencriptar()">
+            Desencriptar
+          </button>
+        </div>
+      </div>
+
+      <div class="container_main_image">
+        <div class="card_image">
+          <img
+            src="./assets/dibujo_img.svg"
+            alt="image_draw"
+            class="search_image"
+            id="image_search"
+          />
+          <h2 class="card_image_title" id="card_image_h2">
+            Ningún mensaje fue encontrado
+          </h2>
+          <p class="card_image_parrafo" id="card_image_p">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+          <p id="card_parrafo_result" hidden></p>
+          <button class="btn_copy" id="btn_copy" hidden onclick="copiedText()">
+            Copiar
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
